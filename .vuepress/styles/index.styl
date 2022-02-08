@@ -1,0 +1,71 @@
+.home-blog .hero .description{
+    width: 18.5em; height: 1.25em;
+    border-right: 1px solid transparent;
+    transition:none !important;
+    transform: none !important;
+    animation: typing 3.5s steps(37, end), blink-caret .75s step-end infinite;
+    font-family: Consolas, Monaco;
+    word-break: break-all;
+    overflow: hidden;
+    opacity: 1 !important;;
+}
+.home-blog .hero h1,.description{
+    color: #fff;
+}
+/*首页right模块*/
+.home-blog .home-blog-wrapper .info-wrapper{
+    background: radial-gradient(circle at bottom right ,transparent 49px, #00AEC2 34px) !important;
+    filter: drop-shadow(2px 2px 2px rgb(64,158,225));
+    box-shadow: none !important;
+}
+.home-blog .home-blog-wrapper .info-wrapper:hover{
+  box-shadow: none !important;
+ 
+}
+.home-blog .home-blog-wrapper .info-wrapper {
+ position:relative;
+}
+.home-blog .home-blog-wrapper .info-wrapper::before{
+  content: '';
+  position:absolute;
+  width: 600px;;
+  height: 450px;
+  animation: myfirst 10s infinite;
+  top: 50%;
+  transform: skewY(-75deg) translateY(-67%);
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  left: -400px;
+}
+@keyframes myfirst {
+    90% {
+      left: -400px;
+    }
+    100% {
+      left: 568px;
+    }
+  }
+ /* 打印效果 */
+  @keyframes typing {
+      90% { width: 0; }
+      100% { width: 18.5em; }
+  }
+  /* 光标闪啊闪 */
+  @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: currentColor; }
+  }
+.personal-info-wrapper > .personal-img{
+     width: auto !important;
+}
+.footer-wrapper>span:nth-child(1){
+    display:none
+}
+.abstract-item > .title:hover{
+  transition: all 1s;
+  transform: translateX(20px);
+}
